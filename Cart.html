@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      body{
+        display: flex;
+        flex-direction: column;
+        
+      }
+        .navContainer {
+      height: 50px;
+      width: 100%;
+      background: linear-gradient(135deg, #1e3c72, #ff5e62);
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    .logoContainer{ 
+        height:50px; 
+        width:80px; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; }
+
+        div{
+            margin-top: 10px;;
+            border-radius:10px;
+            width:99.99%;
+            background-color:#1e3c72;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .card{
+      height: 220px;
+      width: 580px;
+      margin:5px;
+      border:0px;
+      border-radius:30px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: white;
+    }
+    .headding{
+        width:99%;
+        color: white;
+        text-align: center;
+        text-decoration: underline;
+
+    }
+        .imgcontainer{
+            height:200px;
+            width:220px;
+            border: 2px solid rgb(255, 252, 252);
+            margin:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+        }
+        p{
+            height:50px;
+            width: 200px;
+            border: 2px solid rgb(255, 255, 255);
+            display:block;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+        
+        }
+        h4{
+            height:50px;
+            width: 200px;
+            border: 2px solid rgb(255, 255, 255);
+            margin:auto;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .imgcontainer img{
+            height:200px;
+            width: 200px;
+            margin-top:-5px;
+            border-radius:20px;
+        }
+        button{
+            height:30px;
+            width: 100px;
+            border-radius: 50px;
+            border: 0px;
+            margin-bottom:10px;
+            cursor: pointer;
+        }
+        button:hover{
+           opacity: 1.9;
+           transform: scale(1.12);
+        }
+        .btnbuy{
+            background:linear-gradient(90deg, #ff9966, #ff5e62);
+            margin:6px;
+        }
+        #totalPrice{
+            margin-top:-502px;
+            margin-left:240px;
+            font-size:25px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navContainer">
+        <a href="./Home.html" style="text-decoration: none; font-size:30px; color: white; margin-left:10px;"><i class="fa-solid fa-arrow-left"></i></a>
+        <h2 style=" text-decoration: underline; color: white; margin-left:590px;" >Cart Collection</h2>
+        <h2 style=" text-decoration: underline; color: white; margin-left:440px; cursor: pointer;" id="clearCart" >Clear Cart</h2>
+    </nav>
+    <h1 style="color: black; margin-top: 60px; display: inline-block;">Total Cart Price: <span id="totalPrice" >0</span></h1> 
+    <button style="color: black; margin-top: 60px; margin-top:-60px; margin-left:1250px; background-color: #1e3c72; color: white;" id="buyall">Buy All </button> 
+    <div >
+    </div>
+     
+</body>
+<script src="./Cart.js"></script>
+</html>

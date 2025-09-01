@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      height: 2200px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navContainer {
+      height: 50px;
+      width: 100%;
+      background: linear-gradient(135deg, #1e3c72, #ff5e62);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    .logoContainer{ 
+        height:50px; 
+        width:80px; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; }
+
+    .logoimg{ 
+        height:45px; 
+        width:50px; 
+        border-radius:50px; } 
+
+    .menuConatiner{ 
+        height:50px; 
+        width:100%; 
+        flex-basis: 80%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; } 
+
+    .cartContainer{ 
+        height:50px; 
+        width:80px; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; } 
+
+    #cartCount{
+            font-size: 20px;
+            color: red;
+            position: absolute;
+            top: 8px;
+            margin-left:4px;
+            
+        }
+
+    .fa-cart-shopping{ 
+        color: white; 
+        font-size:35px; 
+        display: flex; 
+        flex-wrap: wrap; 
+        align-items: center; 
+        justify-content: center; } 
+    
+    .fa-cart-shopping:hover{
+           opacity: 1.9;
+           transform: scale(1.12);
+        }
+    .menuConatiner ul{ 
+        color: white; 
+        display: flex; 
+        justify-content: space-evenly; 
+        gap: 100px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        text-decoration: none; 
+        list-style-type:none; } 
+    
+    ul li:hover{ 
+        border-bottom: 2px solid white; 
+        cursor: pointer; }
+
+    .footerContainer {
+      height: 45px;
+      width: 100%;
+      background: linear-gradient(135deg, #1e3c72, #ff5e62);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+
+    .contentContainer {
+      flex: 1; 
+      margin-top: 50px;  
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      
+    }
+    .menSection{
+      height: 500px;
+      box-shadow:2px;;
+      width: 99%;
+      border-radius:10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color:#1e3c72;
+      /* background: linear-gradient(135deg, #b5c9ee, #ee8f91); */
+    }
+    .womenSection{
+      height: 500px;
+      box-shadow:2px;;
+      width: 99%;
+      border-radius:10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: #1e3c72;
+      /* background: linear-gradient(135deg, #b5c9ee, #ee8f91); */
+    }
+    .kidSection{
+      height: 500px;
+      box-shadow:2px;;
+      width: 99%;
+      border-radius:10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color:#1e3c72;
+      /* background: linear-gradient(135deg, #b5c9ee, #ee8f91); */
+    }
+    .accessoriesSection{
+      height: 500px;
+      box-shadow:2px;;
+      width: 99%;
+      border-radius:10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color:#1e3c72;
+      /* background: linear-gradient(135deg, #b5c9ee, #ee8f91); */
+    }
+    .card{
+      height: 420px;
+      width: 250px;
+      border:2px solid black;
+      border-radius:30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: white;
+    }
+    .headding{
+        width:99%;
+        color: white;
+        text-align: center;
+        text-decoration: underline;
+
+    }
+        .imgcontainer{
+            height:240px;
+            width:220px;
+            border: 2px solid rgb(255, 252, 252);
+            margin:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+        }
+        p{
+            height:50px;
+            width: 200px;
+            border: 2px solid rgb(255, 255, 255);
+            display:block;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+        
+        }
+        h4{
+            height:50px;
+            width: 200px;
+            border: 2px solid rgb(255, 255, 255);
+            margin:auto;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .imgcontainer img{
+            height:240px;
+            width: 200px;
+            margin-top:-5px;
+            border-radius:20px;
+        }
+        button{
+            background: linear-gradient(90deg, #ff9966, #ff5e62);
+            height:30px;
+            width: 100px;
+            border-radius: 50px;
+            border: 0px;
+            margin-bottom:10px;
+            cursor: pointer;
+        }
+        button:hover{
+           transform: scale(1.12);
+        }
+    
+  </style>
+</head>
+<body>
+    <nav class="navContainer">
+        <aside class="logoContainer">
+            <img  class="logoimg" src="./logo.png" alt="">
+        </aside>
+        <aside class="menuConatiner">
+            <ul>
+                <a href="#menS" style="color: white; text-decoration: none;"><li>Mens</li></a>
+                <a href="#wommenS" style="color: white; text-decoration: none;"><li>Womens</li></a>
+                <a href="#kidss" style="color: white; text-decoration: none;"><li>Kids</li></a>
+                <a href="#accessoriess" style="color: white; text-decoration: none;"><li>Accessories</li></a>
+            </ul>
+        </aside>
+        <aside class="cartContainer">
+            <a href="./Cart.html" style="text-decoration: none;"><i class="fa-solid fa-cart-shopping"></i></a>
+            <span id="cartCount">0</span>
+        </aside>
+    </nav>
+    <div class="contentContainer">
+
+        <!-- Mens Section -->
+        <section class="menSection" id="menS">
+            <div class="headding"><h2>Mens Collection</h2></div>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR4NMW3a75iYM3U87ujLXHgjp_cJaypMbAhF9fVEYZAOeUUSK7C_8pYpM53Iuz6dhct1LVBJH_sbFZ0KZ1R1uaPQOa1mSllDb8LULPYyZo" alt="">
+                </article>
+                <h4>Campus Sutra Men's Printed Casual Shirt</h4>
+                <p><b>₹750</b> </p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQleU-6A2JCOUN-JhZt29bTTEp98fPMnYW962HBAyum4a1KuDJ2C8CmtmRcOlE_OqR4Sgi5ib-7ANNC-5Bz9a7FHQ32R9NkwNh48ilFcNeBg6BBJXxuoU2I" alt="">
+                </article>
+                <h4>The Souled Store Men's Believe Embroidered Casual Shirt</h4>
+                <p><b>₹1500</b>  </p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR02ZpwDsHbxEm0kvPbh6PqJpDKyYndvECJ3KlNfKgjET2FIWXO63s3v00Co7tcxpqv-sKgBsbACOrpPwI6Fv5h6LqeERWfHfIkpqoUYvhsYedufLO2Nz3W9Q" alt="">
+                </article>
+                <h4>Woven Checkered Relaxed Fit Casual Shirt</h4>
+                <p><b>₹1850</b></p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTJ5OMJhVIcQmtm4aD7CyFNZWRSOgE1w625WWqYfY1Il-kYgExXWy4IrcX3Xgv6NldtuUY3MRy-zTMvR_9Xiy4zoHkK4liAN5dqGroRvkE" alt="">
+                </article>
+                <h4>Men's Solid Color Front Tie Pocket Cargo Pants</h4>
+                <p><b>₹1150</b></p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTPQpI6Bpnrmx1kzH3VSGolQnFmTNq0XvuKyO2O-g0NJtTmLLXYNdZBEI7Qyr7JDSrK_CkUgZlHMoW1uys2oXSWsXoD1S05cq1HkvkwXzx4" alt="">
+                </article>
+                <h4>Peter England Men's Solid Flat Front Super Slim Fit Trousers</h4>
+                <p><b>₹1300</b></p>
+                <button>Add To Cart</button>
+            </aside>
+        </section>
+        
+        <!--Womens Section-->
+        <section class="womenSection" id="wommenS">
+            <div class="headding"><h2>Womens Collection</h2></div>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR7bXH80L174pWdV4N9k03ocWIid91lF8Jb1TjSsFuNN-EVohdM8ajCITi98RLFL0zO_C26gCL36CcWJP6DTJocJ1Q18WxyrTNuCmqaQcR6" alt="">
+                </article>
+                <h4>Sugathari Solid Puff Sleeve A-Line Midi Dress by Myntra</h4>
+                <p><b>₹750</b> </p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTMhWmGWfQICX-IbaxVtjfPSDJPaMsIptk-KB9AHWfahDOBnte5hD8T9Bu79z7Jl4fjwH_-b9kn0E9X2Tn2FPBDUifUyWAUZ6zVADa9Fsk" alt="">
+                </article>
+                <h4>streetstylestore Set of 2-Beige kotty style top with flared pants</h4>
+                <p><b>₹1500</b>  </p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRf3p915IrXjgd4byIMTG3czGZ9qBTM_s7FCYupDnpriWQ3GsjcjQ5QAHdRjUmFZAWpzvOom4v58x6J8szUUnmdE-vLeL8RjxvkiNn-966B" alt="">
+                </article>
+                <h4>Claura Women's Floral Printed Shirt Collar Tunic with Trousers</h4>
+                <p><b>₹1850</b></p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQCROh952A3QDOs_LJY-ouvNM_sND_jqyTm0Xx2LmTCkttdtnqkaKkKnDgoMjpYF-Lj6F-3z0eBYLeE6tZG2JFq4YGGRV-8dQwOcnDcFGySFvVncIgMj0T_Hw" alt="">
+                </article>
+                <h4>HOUSE OF Mira Women's Floral Printed Shoulder Sleeves A-line Midi Dress</h4>
+                <p><b>₹750</b>  </p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQjzzksAZR5HIm0CtTe-FVx7RS5EEXn3RakcAn8DdnT3EK_sYGTS1kRnVibLdZMtK5EqoPDOoqhE4Rl_AGMXTdhqaGSfdD-EQjV7TzZAUuc" alt="">
+                </article>
+                <h4>The Souled Store Women's Embroidered Self Design Casual Shirt</h4>
+                <p><b>₹750</b>  </p>
+                <button>Add To Cart</button>
+            </aside>
+        </section>
+
+        <!--Kids Section-->
+        <section class="kidSection" id="kidss">
+            <div class="headding"><h2>Kids Collection</h2></div>
+           <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://m.media-amazon.com/images/I/614wM3DLNEL._SY741_.jpg" alt="">
+                </article>
+                <h4>SHREE SHYAM TEXTILE Dungaree for Baby Boy and Baby Girl</h4>
+                <p><b>₹750</b> </p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/9/d/9dffa66962716_1.jpg?rnd=20200526195200&tr=w-1080" alt="">
+                </article>
+                <h4>Hopscotch Boys Blue Animal Print T-Shirt and Dungaree Set</h4>
+                <p><b>₹1500</b>  </p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://m.media-amazon.com/images/I/51jjgc9i0AL._SX679_.jpg" alt="">
+                </article>
+                <h4>I.T T-shirt and Short Set for Baby Boys & Baby Girls</h4>
+                <p><b>₹1850</b></p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSTVhEzsDu17ixHMeUU8J6tlLK_b0JL9IOhHNdNWFfg9uVv3IWrIRbIzN96ByTshvyrErEC2tKZWI5nQTkxbPRzcqlB2okgMEyobtiXNubs" alt="">
+                </article>
+                <h4>BAESD Girls Floral Flutter Sleeve Net Fit & Flare Dress</h4>
+                <p><b>₹750</b>  </p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRkaN-wH3m9wj8mT6SGQ9KikHr3scghLvLrRt0Sc-dfNl7RKGCmIiroLG8eCm4NUsXsGHSlhhCuYEePav3-vFz5Ag66Z5jSkhfFWsTQbPOSBYsVPeVzAdERDK4" alt="">
+                </article>
+                <h4>RACHANA ENTERPRISE Girls' Ribbed Tank Top and Cream Skirt</h4>
+                <p><b>₹750</b>  </p>
+                <button>Add To Cart</button>
+            </aside>
+        </section>
+
+        <!--Accessories Section-->
+        <section class="accessoriesSection" id="accessoriess">
+             <div class="headding"><h2>Accessories Collection</h2></div>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/d/5ddc4688909203349324_1.jpg?rnd=20200526195200&tr=w-256" alt="">
+                </article>
+                <h4>Van Heusen Women Beige Printed Casual Wallet</h4>
+                <p><b>₹750</b> </p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://m.media-amazon.com/images/I/71YPBIyzEBL._SY625_.jpg" alt="">
+                </article>
+                <h4>EXOTIC Women Feminina Solid Top Handle Tote Hand Bag</h4>
+                <p><b>₹1500</b>  </p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSxnpdDMOf3Jbj75n38PiNzfi2Np6qfvncJwNSZZPYhDrV5zSFJ8scVl2BRitsyPWd0vVW9gqcjmc3-k2mwU4v31l9dMavZOPRGs7ZLTXpiMhj1JVSN0p39Jip1" alt="">
+                </article>
+                <h4>LONDON ALLEY ELK Vintage Leather Wallet</h4>
+                <p><b>₹1850</b></p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQXvDs6OOk3XnwCjJknQ1nX5-a2Zl3ePp_pzeTI_K-TDuP1kWmjhCCD2boDQrheMu8YE2ms5pTaKEA20zoG_jEqsEA2E6hCvLRaaMMXjHirb9o69o8xmPWa" alt="">
+                </article>
+                <h4>Jewels Galaxy Men's Cuban Necklace</h4>
+                <p><b>₹750</b>  </p>
+                <button>Add To Cart</button>
+            </aside>
+            <aside class="card">
+                <article class="imgcontainer">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSG43GViJNVGLhKZbwVCUH4P3GkZA7R976QoLZ4Ugy52yj8JpRvnO8FV9QyUyxWTCMXQNBEDBFdXnZCa1v8mT2WTpS8tVJULql0XlYelt0MUb4LV0qC89lb" alt="">
+                </article>
+                <h4>BlueStone Women's Solitaire Pendant</h4>
+                <p><b>₹750</b>  </p>
+                <button>Add To Cart</button>
+            </aside>
+        </section>
+    </div>
+    <footer class="footerContainer">
+        <h3 style="color: white;">@Copywrite 2025</h3>
+    </footer>
+</body>
+<script src="./Home.js"></script>
+</html>
