@@ -5,14 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SignUp Page</title>
   <style>
-    /* Reset styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+    
+       html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* prevents side scrolling */
+      }
 
+      * {
+        box-sizing: border-box;
+        max-width: 100%; /* prevents elements from going outside the screen */
+      }
+
+      img, video {
+        max-width: 100%;
+        height: auto;
+      }
     body {
       height: 650px;
       display: flex;
@@ -139,4 +148,5 @@
   <script src="./SignUp.js"></script>
 </body>
 </html>
+
 
