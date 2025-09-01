@@ -40,5 +40,6 @@ localStorage.setItem("userInfo", JSON.stringify(formObjData))
 
 
 alert("User register Successful")
-window.location.href= "./Login.html"
+window.location.href= "./index.html"
+
 }
